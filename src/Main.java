@@ -7,14 +7,15 @@ public class Main {
         int currAccount = in.nextInt();
         System.out.println("Enter an addition");
         int addition = in.nextInt();
-
-        int finAccount = currAccount + addition;
-        System.out.println("Final account is " +  finAccount);
+        int bonus = 0;
 
         if (addition > 1000) {
-            System.out.println("Your bonus is " + addition / 100);
-        } else {
-            System.out.println("Your bonus is 0");
+            bonus = addition / 100;
         }
+        int finAccount = currAccount + addition + bonus;
+
+        System.out.println("Your bonus is " + bonus);
+        System.out.println("Final account is " + finAccount);
+
     }
 }
